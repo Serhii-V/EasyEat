@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2778C91A371FA98569D2F692 /* Pods_EasyEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908454EDAC19E87BA7E91936 /* Pods_EasyEat.framework */; };
-		C5A0EF3021A889C400F6F697 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0EF2F21A889C400F6F697 /* AppDelegate.swift */; };
-		C5A0EF3221A889C400F6F697 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0EF3121A889C400F6F697 /* ViewController.swift */; };
+		C5A0EF3021A889C400F6F697 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A0EF2F21A889C400F6F697 /* StartVC.swift */; };
 		C5A0EF3521A889C400F6F697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A0EF3321A889C400F6F697 /* Main.storyboard */; };
-		C5A0EF3721A889C500F6F697 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A0EF3621A889C500F6F697 /* Assets.xcassets */; };
 		C5A0EF3A21A889C500F6F697 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A0EF3821A889C500F6F697 /* LaunchScreen.storyboard */; };
+		C5CADA3821A8A3F50042B389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CADA3721A8A3F50042B389 /* Assets.xcassets */; };
+		C5CADA3A21A8A63B0042B389 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CADA3921A8A63B0042B389 /* StartVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		908454EDAC19E87BA7E91936 /* Pods_EasyEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16FF04D0D7463735554CA08 /* Pods-EasyEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyEat/Pods-EasyEat.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A0EF2C21A889C400F6F697 /* EasyEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5A0EF2F21A889C400F6F697 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C5A0EF3121A889C400F6F697 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5A0EF2F21A889C400F6F697 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		C5A0EF3421A889C400F6F697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C5A0EF3621A889C500F6F697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5A0EF3921A889C500F6F697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5A0EF3B21A889C500F6F697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CADA3721A8A3F50042B389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5CADA3921A8A63B0042B389 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +70,62 @@
 		C5A0EF2E21A889C400F6F697 /* EasyEat */ = {
 			isa = PBXGroup;
 			children = (
-				C5A0EF2F21A889C400F6F697 /* AppDelegate.swift */,
-				C5A0EF3121A889C400F6F697 /* ViewController.swift */,
-				C5A0EF3321A889C400F6F697 /* Main.storyboard */,
-				C5A0EF3621A889C500F6F697 /* Assets.xcassets */,
-				C5A0EF3821A889C500F6F697 /* LaunchScreen.storyboard */,
+				C5A0EF2F21A889C400F6F697 /* StartVC.swift */,
+				C5DB273621A8A137009FCFAF /* Storyboards */,
+				C5DB273721A8A15A009FCFAF /* Classes */,
+				C5DB273C21A8A219009FCFAF /* Resource */,
 				C5A0EF3B21A889C500F6F697 /* Info.plist */,
 			);
 			path = EasyEat;
+			sourceTree = "<group>";
+		};
+		C5DB273621A8A137009FCFAF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C5A0EF3321A889C400F6F697 /* Main.storyboard */,
+				C5A0EF3821A889C500F6F697 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C5DB273721A8A15A009FCFAF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C5DB273B21A8A1C0009FCFAF /* Controllers */,
+				C5DB273921A8A1AA009FCFAF /* Model */,
+				C5DB273821A8A198009FCFAF /* Custom UI elements */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C5DB273821A8A198009FCFAF /* Custom UI elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom UI elements";
+			sourceTree = "<group>";
+		};
+		C5DB273921A8A1AA009FCFAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5DB273B21A8A1C0009FCFAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5CADA3921A8A63B0042B389 /* StartVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C5DB273C21A8A219009FCFAF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C5CADA3721A8A3F50042B389 /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		FED65EF79690D711A4600DE0 /* Frameworks */ = {
@@ -148,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5A0EF3A21A889C500F6F697 /* LaunchScreen.storyboard in Resources */,
-				C5A0EF3721A889C500F6F697 /* Assets.xcassets in Resources */,
+				C5CADA3821A8A3F50042B389 /* Assets.xcassets in Resources */,
 				C5A0EF3521A889C400F6F697 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,8 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A0EF3221A889C400F6F697 /* ViewController.swift in Sources */,
-				C5A0EF3021A889C400F6F697 /* AppDelegate.swift in Sources */,
+				C5A0EF3021A889C400F6F697 /* StartVC.swift in Sources */,
+				C5CADA3A21A8A63B0042B389 /* StartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ghw.EasyEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -362,7 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ghw.EasyEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
