@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FoodListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -50,12 +51,19 @@ class FoodListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func sendRequest() {
+        Alamofire.request("http://application1913-easyeat.a3c1.starter-us-west-1.openshiftapps.com/easyeatapp/recipepage.eat?good=lemon&good=pineapple&good=apple").response { (response) in
+            print(response.data)
+        }
+    }
+    
     @IBAction func filterButtonTapped(_ sender: UIButton) {
         showAlert()
     }
     
     @IBAction func findReciptsTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "result", sender: self)
+        sendRequest()
+       // self.performSegue(withIdentifier: "result", sender: self)
     }
     
     
