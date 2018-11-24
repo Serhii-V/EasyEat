@@ -142,64 +142,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srM-ao-KQX">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xK-dH-CGU">
-                                        <rect key="frame" x="0.0" y="80" width="375" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="S1C-P3-SSO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
-                                        <state key="normal" title="START RECOGNATION">
-                                            <color key="titleColor" red="1" green="0.68235294120000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="mainButtonTapped:" destination="LTQ-94-ArR" eventType="touchUpInside" id="Oqa-Rh-CVu"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcJ-py-Qxd">
-                                        <rect key="frame" x="20" y="135" width="120" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="EGQ-xw-GKi"/>
-                                            <constraint firstAttribute="width" constant="120" id="FI7-dd-fYJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="+ Add more">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addMoreButtonTapped:" destination="LTQ-94-ArR" eventType="touchUpInside" id="igV-xP-j1t"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-wG-hfT">
-                                        <rect key="frame" x="235" y="135" width="120" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="tbX-9g-i8h"/>
-                                            <constraint firstAttribute="height" constant="40" id="ymC-Ud-wmM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                        <state key="normal" title="GO TO LIST &gt;">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goToListButtonTapped:" destination="LTQ-94-ArR" eventType="touchUpInside" id="33l-8X-f4e"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.14509803921568626" green="0.19607843137254902" blue="0.21568627450980393" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="0Lg-Rf-Vy6"/>
-                                    <constraint firstItem="0xK-dH-CGU" firstAttribute="centerX" secondItem="srM-ao-KQX" secondAttribute="centerX" id="7cW-Bb-kij"/>
-                                    <constraint firstAttribute="trailing" secondItem="bgT-wG-hfT" secondAttribute="trailing" constant="20" id="DRs-T5-SqJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="bgT-wG-hfT" secondAttribute="bottom" constant="25" id="Uj4-Mg-8R4"/>
-                                    <constraint firstItem="0xK-dH-CGU" firstAttribute="centerY" secondItem="srM-ao-KQX" secondAttribute="centerY" id="ZxY-mR-Nn9"/>
-                                    <constraint firstItem="0xK-dH-CGU" firstAttribute="leading" secondItem="srM-ao-KQX" secondAttribute="leading" id="h4t-JN-Te7"/>
-                                    <constraint firstItem="GcJ-py-Qxd" firstAttribute="leading" secondItem="srM-ao-KQX" secondAttribute="leading" constant="20" id="qAU-La-z5s"/>
-                                    <constraint firstAttribute="trailing" secondItem="0xK-dH-CGU" secondAttribute="trailing" id="vIn-i0-QFR"/>
-                                    <constraint firstItem="GcJ-py-Qxd" firstAttribute="centerY" secondItem="bgT-wG-hfT" secondAttribute="centerY" id="we5-bG-g9e"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VxZ-XB-FV1">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="place" translatesAutoresizingMaskIntoConstraints="NO" id="wmE-sz-QDa">
+                                <rect key="frame" x="5" y="94" width="151.5" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="Tvz-qZ-Awr"/>
+                                    <constraint firstAttribute="width" constant="151.5" id="cuT-nq-uTx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="push" translatesAutoresizingMaskIntoConstraints="NO" id="rp9-Qe-dp6">
+                                <rect key="frame" x="290" y="467" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1AD-O7-jgi"/>
+                                    <constraint firstAttribute="height" constant="50" id="78M-zp-9ss"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xK-dH-CGU">
+                                <rect key="frame" x="50" y="527" width="275" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.68235294120000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="S1C-P3-SSO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="START RECOGNATION">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="mainButtonTapped:" destination="LTQ-94-ArR" eventType="touchUpInside" id="Oqa-Rh-CVu"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-wG-hfT">
+                                <rect key="frame" x="235" y="597" width="120" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.68235294120000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="pFl-xR-t7a"/>
+                                    <constraint firstAttribute="width" constant="120" id="tbX-9g-i8h"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="v1f-Za-UDh"/>
+                                    <constraint firstAttribute="height" constant="50" id="ymC-Ud-wmM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="GO TO LIST &gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goToListButtonTapped:" destination="LTQ-94-ArR" eventType="touchUpInside" id="33l-8X-f4e"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcJ-py-Qxd">
+                                <rect key="frame" x="20" y="602" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="6ui-CA-U2x"/>
+                                    <constraint firstAttribute="height" constant="40" id="EGQ-xw-GKi"/>
+                                    <constraint firstAttribute="width" constant="120" id="FI7-dd-fYJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ng3-Zc-Wp8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="+ Add more">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMoreButtonTapped:" destination="LTQ-94-ArR" eventType="touchUpInside" id="igV-xP-j1t"/>
+                                </connections>
+                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFP-ul-Uoq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
@@ -211,23 +228,27 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VxZ-XB-FV1">
-                                <rect key="frame" x="0.0" y="44" width="375" height="423"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="srM-ao-KQX" firstAttribute="bottom" secondItem="Exr-zZ-0Td" secondAttribute="bottom" id="1eJ-ja-qZr"/>
-                            <constraint firstItem="srM-ao-KQX" firstAttribute="leading" secondItem="Exr-zZ-0Td" secondAttribute="leading" id="26d-b2-yNC"/>
-                            <constraint firstItem="srM-ao-KQX" firstAttribute="top" secondItem="VxZ-XB-FV1" secondAttribute="bottom" id="2yw-Lm-aFJ"/>
-                            <constraint firstItem="VxZ-XB-FV1" firstAttribute="leading" secondItem="srM-ao-KQX" secondAttribute="leading" id="GAS-xg-dY0"/>
+                            <constraint firstItem="bgT-wG-hfT" firstAttribute="top" secondItem="0xK-dH-CGU" secondAttribute="bottom" constant="20" id="ACh-06-D6j"/>
+                            <constraint firstItem="GcJ-py-Qxd" firstAttribute="leading" secondItem="Exr-zZ-0Td" secondAttribute="leading" constant="20" id="CXG-d3-KFb"/>
+                            <constraint firstItem="Exr-zZ-0Td" firstAttribute="trailing" secondItem="0xK-dH-CGU" secondAttribute="trailing" constant="50" id="DNj-2i-9Pl"/>
+                            <constraint firstItem="wmE-sz-QDa" firstAttribute="top" secondItem="JFP-ul-Uoq" secondAttribute="bottom" constant="50" id="E1S-NN-vza"/>
+                            <constraint firstItem="Exr-zZ-0Td" firstAttribute="bottom" secondItem="bgT-wG-hfT" secondAttribute="bottom" constant="20" id="E4h-jH-Wj4"/>
+                            <constraint firstItem="0xK-dH-CGU" firstAttribute="top" secondItem="rp9-Qe-dp6" secondAttribute="bottom" constant="10" id="Ehn-5I-g0P"/>
                             <constraint firstItem="JFP-ul-Uoq" firstAttribute="top" secondItem="nR2-Pf-VTS" secondAttribute="top" id="K9c-Aj-w8i"/>
-                            <constraint firstItem="VxZ-XB-FV1" firstAttribute="trailing" secondItem="srM-ao-KQX" secondAttribute="trailing" id="QnG-TU-nlT"/>
-                            <constraint firstItem="srM-ao-KQX" firstAttribute="trailing" secondItem="Exr-zZ-0Td" secondAttribute="trailing" id="fNI-La-Z1j"/>
+                            <constraint firstItem="0xK-dH-CGU" firstAttribute="leading" secondItem="Exr-zZ-0Td" secondAttribute="leading" constant="50" id="QrF-yU-s9Z"/>
+                            <constraint firstItem="Exr-zZ-0Td" firstAttribute="trailing" secondItem="bgT-wG-hfT" secondAttribute="trailing" constant="20" id="Yud-88-23Y"/>
+                            <constraint firstItem="wmE-sz-QDa" firstAttribute="leading" secondItem="Exr-zZ-0Td" secondAttribute="leading" constant="5" id="aD8-qm-1V9"/>
+                            <constraint firstItem="VxZ-XB-FV1" firstAttribute="top" secondItem="JFP-ul-Uoq" secondAttribute="bottom" id="eia-ys-94q"/>
                             <constraint firstItem="JFP-ul-Uoq" firstAttribute="leading" secondItem="Exr-zZ-0Td" secondAttribute="leading" id="gd3-f0-19H"/>
-                            <constraint firstItem="VxZ-XB-FV1" firstAttribute="top" secondItem="JFP-ul-Uoq" secondAttribute="bottom" id="jCC-6U-lpW"/>
+                            <constraint firstItem="VxZ-XB-FV1" firstAttribute="bottom" secondItem="Exr-zZ-0Td" secondAttribute="bottom" id="h75-Xy-YAG"/>
+                            <constraint firstItem="Exr-zZ-0Td" firstAttribute="trailing" secondItem="rp9-Qe-dp6" secondAttribute="trailing" constant="5" id="ijJ-hB-DIB"/>
+                            <constraint firstItem="VxZ-XB-FV1" firstAttribute="leading" secondItem="Exr-zZ-0Td" secondAttribute="leading" id="kBk-52-eBN"/>
+                            <constraint firstItem="GcJ-py-Qxd" firstAttribute="centerY" secondItem="bgT-wG-hfT" secondAttribute="centerY" id="mly-AO-OuB"/>
                             <constraint firstItem="JFP-ul-Uoq" firstAttribute="trailing" secondItem="Exr-zZ-0Td" secondAttribute="trailing" id="n8K-qp-LEs"/>
+                            <constraint firstItem="VxZ-XB-FV1" firstAttribute="trailing" secondItem="Exr-zZ-0Td" secondAttribute="trailing" id="ojy-15-wFD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Exr-zZ-0Td"/>
                     </view>
@@ -236,6 +257,8 @@
                         <outlet property="cameraView" destination="VxZ-XB-FV1" id="0Qq-kJ-WNG"/>
                         <outlet property="goToListButton" destination="bgT-wG-hfT" id="UdY-l8-LYN"/>
                         <outlet property="mainButtton" destination="0xK-dH-CGU" id="X1M-kU-Dkl"/>
+                        <outlet property="placeImage" destination="wmE-sz-QDa" id="bBR-In-6v5"/>
+                        <outlet property="pushImage" destination="rp9-Qe-dp6" id="oKg-pK-h5V"/>
                         <segue destination="efU-5f-erM" kind="show" identifier="toList" id="MFu-vk-SLU"/>
                     </connections>
                 </viewController>
@@ -378,7 +401,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="WdJ-Mv-iyG"/>
                                 </constraints>
-                                <mutableString key="text">Enjoy fresh pineapple, bananas, grapes, mandarin oranges and apples, mixed with orange and lemon juices in this brunch recipe.
+                                <string key="text">Enjoy fresh pineapple, bananas, grapes, mandarin oranges and apples, mixed with orange and lemon juices in this brunch recipe.
 Makes: 10 servings
 Prep Time: 20 minutes
 Cook Time: 2 minutes
@@ -394,7 +417,7 @@ Ingredients
 ⅓ cup orange juice
 1 tablespoon lemon juice
 Pour the mixture over the fruit and mix gently.
-Cover and refrigerate until serving time.</mutableString>
+Cover and refrigerate until serving time.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -441,6 +464,8 @@ Cover and refrigerate until serving time.</mutableString>
         <image name="egg" width="375" height="667"/>
         <image name="fbLogo" width="11" height="21"/>
         <image name="launnchScreen" width="375" height="667"/>
+        <image name="place" width="123" height="115"/>
+        <image name="push" width="112" height="53"/>
         <image name="recipt-img" width="375" height="337"/>
     </resources>
 </document>

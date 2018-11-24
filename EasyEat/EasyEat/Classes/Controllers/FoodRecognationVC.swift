@@ -16,6 +16,8 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var addmoreButton: UIButton!
     @IBOutlet weak var goToListButton: UIButton!
+    @IBOutlet weak var placeImage: UIImageView!
+    @IBOutlet weak var pushImage: UIImageView!
     
     
     
@@ -25,6 +27,8 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
           foodRecognation = false
         }
     }
+    
+    let appleLayer: UIImageView =  UIImageView.init(image: UIImage(named: "CameraShape"))
     
     var foodRecognation = false
     var foodList: [String] = [String]()
@@ -82,7 +86,17 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         captureSession.addOutput(captureOutput)
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        let bounds = self.cameraView.layer.bounds;
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill;
+        previewLayer.bounds = bounds;
+        previewLayer.position = CGPoint(x: bounds.width, y: bounds.height);
         previewLayer.frame = cameraView.bounds
+        
+        
+        appleLayer.frame = previewLayer.frame
+        appleLayer.backgroundColor = UIColor.init(white: 0.5, alpha: 0.0)
+        
+        previewLayer.addSublayer(appleLayer.layer)
         cameraView.layer.addSublayer(previewLayer)
         
         
@@ -130,6 +144,9 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     @IBAction func mainButtonTapped(_ sender: UIButton) {
+        placeImage.isHidden = true
+        pushImage.isHidden = true
+        appleLayer.isHidden = true
         if sender.titleLabel?.text == "START RECOGNATION" {
             foodRecognation = true
             sender.titleLabel?.text = ""
