@@ -14,11 +14,21 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     @IBOutlet weak var mainButtton: UIButton!
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var addmoreButton: UIButton!
+    @IBOutlet weak var goToListButton: UIButton!
     
     
-    var currentFood: String?
+    
+//    let captureSession = AVCaptureSession()
+    var currentFood: String? {
+        didSet {
+          foodRecognation = false
+        }
+    }
+    
     var foodRecognation = false
     var foodList: [String] = [String]()
+    
     var presetFood = ["banana":"Banana",
                       "Granny Smith":"Apple",
                       "pineapple, ananas":"Pineapple",
@@ -42,10 +52,17 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         setupCaptureSession()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toList" {
+            if let nextViewController = segue.destination as? FoodListVC {
+                nextViewController.foodList = foodList
+            }
+        }
+    }
+    
     func setupCaptureSession() {
-        let captureSession = AVCaptureSession()
-        
         // search for available capture devices
+        let captureSession = AVCaptureSession()
         let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices
         
         // setup capture device, add input to our capture session
@@ -59,6 +76,7 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         }
         
         // setup output, add output to our capture session
+        
         let captureOutput = AVCaptureVideoDataOutput()
         captureOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
         captureSession.addOutput(captureOutput)
@@ -86,8 +104,9 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
             
             DispatchQueue.main.async(execute: {
                 let key = "\(Observation.identifier)"
+                print(key)
                 if (self.presetFood.keys.contains(key) && self.currentFood != self.presetFood[key] ) {
-                    self.currentFood = self.presetFood[key]
+                    self.currentFood = self.presetFood[key]!
                     self.mainButtton.titleLabel?.text = "\(self.currentFood!)  + ADD TO LIST"
                 }
             })
@@ -111,13 +130,25 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     @IBAction func mainButtonTapped(_ sender: UIButton) {
-        foodRecognation = !foodRecognation
-        if !foodRecognation {
-            mainButtton.titleLabel?.text = "START RECOGNATION"
+        if sender.titleLabel?.text == "START RECOGNATION" {
+            foodRecognation = true
+            sender.titleLabel?.text = ""
         } else {
             guard let food = currentFood else {return}
+            foodRecognation = false
+            goToListButton.isHidden = false
+            if !foodList.contains(food) {
             foodList.append(food)
+            }
         }
+}
+    
+    @IBAction func addMoreButtonTapped(_ sender: UIButton) {
+     
+    }
+    
+    @IBAction func goToListButtonTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toList", sender: self)
     }
     
 }
