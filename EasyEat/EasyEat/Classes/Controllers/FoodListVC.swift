@@ -19,6 +19,14 @@ class FoodListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return food.count
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "result" {
+            if let nextViewController = segue.destination as? RecipeVC {
+                nextViewController.mainFruit = foodList?.first
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as UITableViewCell
         guard let food = foodList else {return cell}
@@ -51,19 +59,13 @@ class FoodListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func sendRequest() {
-        Alamofire.request("http://application1913-easyeat.a3c1.starter-us-west-1.openshiftapps.com/easyeatapp/recipepage.eat?good=lemon&good=pineapple&good=apple").response { (response) in
-            print(response.data)
-        }
-    }
     
     @IBAction func filterButtonTapped(_ sender: UIButton) {
         showAlert()
     }
     
     @IBAction func findReciptsTapped(_ sender: UIButton) {
-        sendRequest()
-       // self.performSegue(withIdentifier: "result", sender: self)
+        self.performSegue(withIdentifier: "result", sender: self)
     }
     
     

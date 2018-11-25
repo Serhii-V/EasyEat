@@ -466,21 +466,21 @@
             </objects>
             <point key="canvasLocation" x="2701.5999999999999" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--RecipeVC-->
         <scene sceneID="SiR-BD-A9j">
             <objects>
-                <viewController id="FM1-Er-n06" sceneMemberID="viewController">
+                <viewController id="FM1-Er-n06" customClass="RecipeVC" customModule="EasyEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xil-gB-JTU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OfH-A0-fDa">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OfH-A0-fDa">
                                 <rect key="frame" x="0.0" y="317" width="375" height="350"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="WdJ-Mv-iyG"/>
                                 </constraints>
-                                <string key="text">Enjoy fresh pineapple, bananas, grapes, mandarin oranges and apples, mixed with orange and lemon juices in this brunch recipe.
+                                <mutableString key="text">Enjoy fresh pineapple, bananas, grapes, mandarin oranges and apples, mixed with orange and lemon juices in this brunch recipe.
 Makes: 10 servings
 Prep Time: 20 minutes
 Cook Time: 2 minutes
@@ -496,7 +496,7 @@ Ingredients
 ⅓ cup orange juice
 1 tablespoon lemon juice
 Pour the mixture over the fruit and mix gently.
-Cover and refrigerate until serving time.</string>
+Cover and refrigerate until serving time.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -530,7 +530,7 @@ Cover and refrigerate until serving time.</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recipt-img" translatesAutoresizingMaskIntoConstraints="NO" id="fbv-Ii-9iL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="fbv-Ii-9iL">
                                 <rect key="frame" x="0.0" y="44" width="375" height="273"/>
                             </imageView>
                         </subviews>
@@ -549,6 +549,10 @@ Cover and refrigerate until serving time.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7eH-Xj-QBS"/>
                     </view>
+                    <connections>
+                        <outlet property="recipeDescription" destination="OfH-A0-fDa" id="4mA-P0-jdg"/>
+                        <outlet property="recipeImage" destination="fbv-Ii-9iL" id="3Qe-Qf-mhx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQF-dF-deH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -584,14 +588,14 @@ Cover and refrigerate until serving time.</string>
         <image name="egg" width="375" height="667"/>
         <image name="fbLogo" width="11" height="21"/>
         <image name="launnchScreen" width="375" height="667"/>
+        <image name="loading" width="343" height="180"/>
         <image name="place" width="123" height="115"/>
         <image name="push" width="112" height="53"/>
-        <image name="recipt-img" width="375" height="337"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MFu-vk-SLU"/>
+        <segue reference="Uk6-3q-oNn"/>
         <segue reference="gSV-fU-FZl"/>
         <segue reference="EKd-7s-FfG"/>
-        <segue reference="PYl-wT-t5h"/>
+        <segue reference="8if-yX-CIj"/>
     </inferredMetricsTieBreakers>
 </document>

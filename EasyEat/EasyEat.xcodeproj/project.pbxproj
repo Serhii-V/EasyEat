@@ -11,6 +11,7 @@
 		C520ACD321A8E60F00D34EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C520ACD221A8E60F00D34EA5 /* AppDelegate.swift */; };
 		C520ACD721A8F11900D34EA5 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C520ACD621A8F11900D34EA5 /* MobileNet.mlmodel */; };
 		C56A1B4021AA9AE80063905A /* UsageTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A1B3F21AA9AE80063905A /* UsageTypeVC.swift */; };
+		C56A1B4221AAD89B0063905A /* RecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A1B4121AAD89B0063905A /* RecipeVC.swift */; };
 		C592BE4E21A90C3A0021CCBB /* FoodListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592BE4D21A90C3A0021CCBB /* FoodListVC.swift */; };
 		C5A0EF3521A889C400F6F697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A0EF3321A889C400F6F697 /* Main.storyboard */; };
 		C5A0EF3A21A889C500F6F697 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A0EF3821A889C500F6F697 /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 		C520ACD221A8E60F00D34EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../Developer/Test/Test/AppDelegate.swift; sourceTree = "<group>"; };
 		C520ACD621A8F11900D34EA5 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		C56A1B3F21AA9AE80063905A /* UsageTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageTypeVC.swift; sourceTree = "<group>"; };
+		C56A1B4121AAD89B0063905A /* RecipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeVC.swift; sourceTree = "<group>"; };
 		C592BE4D21A90C3A0021CCBB /* FoodListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListVC.swift; sourceTree = "<group>"; };
 		C5A0EF2C21A889C400F6F697 /* EasyEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A0EF3421A889C400F6F697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				C56A1B3F21AA9AE80063905A /* UsageTypeVC.swift */,
 				C5E905A421A8C08F00AE138A /* FoodRecognationVC.swift */,
 				C592BE4D21A90C3A0021CCBB /* FoodListVC.swift */,
+				C56A1B4121AAD89B0063905A /* RecipeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				C5E905A521A8C08F00AE138A /* FoodRecognationVC.swift in Sources */,
 				C56A1B4021AA9AE80063905A /* UsageTypeVC.swift in Sources */,
 				C5CADA3A21A8A63B0042B389 /* StartVC.swift in Sources */,
+				C56A1B4221AAD89B0063905A /* RecipeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
