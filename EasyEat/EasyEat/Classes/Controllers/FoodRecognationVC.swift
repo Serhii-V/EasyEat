@@ -144,15 +144,16 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     
     @IBAction func mainButtonTapped(_ sender: UIButton) {
+        foodRecognation = true
         placeImage.isHidden = true
         pushImage.isHidden = true
         appleLayer.isHidden = true
-        if sender.titleLabel?.text == "START RECOGNATION" {
+        if sender.titleLabel?.text == "START RECOGNITION" {
             foodRecognation = true
             sender.titleLabel?.text = ""
         } else {
-            guard let food = currentFood else {return}
             foodRecognation = false
+            guard let food = currentFood else {return}
             goToListButton.isHidden = false
             if !foodList.contains(food) {
             foodList.append(food)
@@ -165,6 +166,7 @@ class FoodRecognationVC: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     }
     
     @IBAction func goToListButtonTapped(_ sender: UIButton) {
+        foodRecognation = false
         self.performSegue(withIdentifier: "toList", sender: self)
     }
     
